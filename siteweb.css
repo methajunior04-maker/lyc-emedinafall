@@ -1,300 +1,169 @@
-/* ========================
-   STYLE GÉNÉRAL
-======================== */
-:root{
-    --bg: #f5f7fb;
-    --primary: #0a58ca;
-    --accent: #0dcaf0;
-    --nav-bg: #0f1724;
-    --muted: #6c757d;
-}
-
 body {
     margin: 0;
-    font-family: 'Poppins', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-    background-color: var(--bg);
-    color: #222;
-    -webkit-font-smoothing:antialiased;
-    -moz-osx-font-smoothing:grayscale;
+    font-family: 'Poppins', sans-serif;
 }
 
-/* ========================
-   BANNIÈRE
-======================== */
+/* SCROLL FLUIDE */
+html {
+    scroll-behavior: smooth;
+}
+
+/* BANNIÈRE */
 .banner {
-    background-image: url("images/banner.jpg");
-    background-size: cover;
-    background-position: center;
-    height: 320px;
-    position: relative;
-}
-
-.banner::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: rgba(0, 0, 0, 0.6);
+    background: #0a58ca;
+    color: white;
+    padding: 20px;
 }
 
 .banner-content {
-    position: relative;
     display: flex;
     align-items: center;
-    height: 100%;
-    padding: 0 32px;
-    color: white;
 }
 
 .logo {
-    width: 100px;
+    width: 80px;
     margin-right: 20px;
-    margin-top: 110px; /* descendre le logo davantage dans le site */
 }
-.banner-text h1 {
-    margin: 0;
-    font-size: 40px;
-    letter-spacing: 0.6px;
-}
-.banner-text p {
-    margin-top: 8px;
-    font-size: 15px;
-    color: rgba(255,255,255,0.9);
-}
+
+/* MENU */
 .menu {
-    background: var(--nav-bg);
     position: sticky;
     top: 0;
-    z-index: 50;
-    box-shadow: 0 3px 10px rgba(2,6,23,0.15);
+    background: white;
+    z-index: 1000;
 }
 
 .menu ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
     display: flex;
+    list-style: none;
+    padding: 10px;
+    margin: 0;
     justify-content: center;
 }
 
-.menu ul li a {
-    display: block;
-    padding: 14px 18px;
-    color: white;
+.menu li {
+    margin: 0 15px;
+}
+
+.menu a {
     text-decoration: none;
+    color: black;
     font-weight: 600;
-    transition: background-color .22s ease, color .22s ease, transform .12s ease;
-    border-radius: 8px;
+    transition: 0.3s;
 }
 
-.menu ul li a i {
-    margin-right: 6px;
+.menu a:hover {
+    color: #0a58ca;
 }
 
-.menu ul li a:hover {
-    background-color: rgba(13,202,240,0.12);
-    color: var(--accent);
-    transform: translateY(-2px);
+/* PAGE ACTIVE */
+.menu a.active {
+    border-bottom: 3px solid #0dcaf0;
+    color: #0a58ca;
 }
 
-/* ========================
-   HERO
-======================== */
+/* HERO */
 .hero {
     text-align: center;
-    padding: 70px 20px;
-    background: linear-gradient(135deg, var(--primary), var(--accent));
-    color: white;
+    padding: 50px 20px;
+    animation: fadeIn 0.8s ease-in;
 }
 
-.hero h2 {
-    font-size: 36px;
-}
-
-.hero p {
-    max-width: 700px;
-    margin: 15px auto;
-}
-
-.hero-sub{
-    max-width: 680px;
-    margin: 10px auto 0;
-    color: rgba(255,255,255,0.95);
-    font-weight: 300;
-}
-
-.hero-actions{
-    display:flex;
-    gap:12px;
-    justify-content:center;
-    margin-top:20px;
-    flex-wrap:wrap;
-}
-
-.btn-outline{
-    background: transparent;
-    color: rgba(255,255,255,0.95);
-    border: 2px solid rgba(255,255,255,0.22);
-    padding: 10px 22px;
-    border-radius: 8px;
-    font-weight:600;
-    transition: background .18s ease, transform .12s ease, border-color .12s ease;
-}
-.btn-outline:hover{background: rgba(255,255,255,0.08); border-color: rgba(255,255,255,0.38); transform: translateY(-3px)}
-.btn:focus, .btn-outline:focus{outline:3px solid rgba(13,202,240,0.18)}
-
+/* BOUTON */
 .btn {
-    display: inline-block;
-    margin-top: 20px;
-    padding: 12px 26px;
-    background: white;
-    color: var(--primary);
+    background: #0a58ca;
+    color: white;
+    padding: 12px 25px;
+    border-radius: 30px;
     text-decoration: none;
-    font-weight: 600;
-    border-radius: 8px;
-    box-shadow: 0 6px 18px rgba(12,58,110,0.08);
-    transition: transform .18s ease, box-shadow .18s ease;
+    transition: 0.3s;
 }
 
 .btn:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 10px 30px rgba(12,58,110,0.12);
+    background: #0dcaf0;
+    color: black;
 }
 
-/* ========================
-   SECTIONS
-======================== */
+/* SECTIONS */
 .section {
-    padding: 50px 20px;
-    max-width: 1000px;
-    margin: auto;
-}
-
-.section h2 {
-    text-align: center;
-    color: #0a58ca;
-    margin-bottom: 30px;
+    padding: 40px;
+    animation: fadeIn 0.8s ease-in;
 }
 
 .bg-light {
-    background: #f8f9fa;
+    background: #f5f5f5;
 }
 
-/* ========================
-   CARTES
-======================== */
+/* CARDS */
 .cards {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    display: flex;
     gap: 20px;
+    flex-wrap: wrap;
 }
 
 .card {
     background: white;
-    padding: 24px;
+    padding: 20px;
+    flex: 1;
+    min-width: 200px;
+    border-radius: 10px;
     text-align: center;
-    border-radius: 12px;
-    box-shadow: 0 6px 18px rgba(15,23,42,0.06);
-    transition: transform .16s ease, box-shadow .16s ease;
+    transition: 0.3s;
 }
 
-.card:hover{
-    transform: translateY(-6px);
-    box-shadow: 0 18px 36px rgba(15,23,42,0.12);
+.card:hover {
+    transform: translateY(-5px);
 }
 
-.card i {
-    color: var(--accent);
-    margin-bottom: 10px;
-}
-
-/* ========================
-   LISTE
-======================== */
-.list {
-    max-width: 600px;
-    margin: auto;
-    list-style: none;
-    padding: 0;
-}
-
+/* LISTE */
 .list li {
-    padding: 12px;
-    border-bottom: 1px solid #e6e9ef;
+    margin: 10px 0;
 }
 
-.list i {
-    color: green;
-    margin-right: 8px;
-}
-
-/* ========================
-   CITATION
-======================== */
+/* QUOTE */
 .quote {
-    background: #0f1724;
-    color: white;
     text-align: center;
-    padding: 40px 20px;
     font-style: italic;
+    padding: 30px;
 }
 
-/* ========================
-   FOOTER
-======================== */
+/* FOOTER */
 .footer {
     text-align: center;
-    background-color: #0f1724;
-    color: rgba(255,255,255,0.92);
-    padding: 18px 12px;
+    padding: 20px;
+    background: #0a58ca;
+    color: white;
 }
 
-/* ========================
-   RESPONSIVE
-======================== */
-@media (max-width: 768px) {
-    .banner-content {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .logo {
-        margin-bottom: 15px;
-        margin-top: 0; /* annule le décalage vertical sur mobile */
-    }
-
-    .menu ul {
-        flex-direction: column;
-    }
-
-    .banner-text h1 {
-        font-size: 30px;
-    }
-
-    .hero h2 {
-        font-size: 28px;
-    }
+/* NAVIGATION BAS */
+.navigation-rapide {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
 }
 
-/* Small utility */
-.muted{color:var(--muted);}
-
-a{color:inherit}
-
-/* Improve images responsiveness */
-img{max-width:100%;height:auto;display:block}
-
-/* Skip link for accessibility */
-.skip-link{
-    position:absolute;
-    left:16px;
-    top:-48px;
-    background:#fff;
-    color:var(--nav-bg);
-    padding:8px 12px;
-    border-radius:6px;
-    box-shadow:0 6px 18px rgba(2,6,23,0.08);
-    z-index:120;
-    text-decoration:none;
-    font-weight:600;
+.btn-nav {
+    background: #0a58ca;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: 0.3s;
 }
-.skip-link:focus{top:16px;outline:3px solid rgba(13,202,240,0.25)}
+
+.btn-nav:hover {
+    background: #0dcaf0;
+    color: black;
+}
+
+/* ANIMATION */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
