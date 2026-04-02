@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Blog du Club TIC</title>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <!-- Site CSS -->
+    <link rel="stylesheet" href="siteweb.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+<style>
+body {
+    margin: 0;
+    font-family: "Segoe UI", sans-serif;
+    background: #f4f6f9;
+}
+
+/* ===== HEADER ===== */
+.header {
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+                url("images/banner.jpg");
+    background-size: cover;
+    background-position: center;
+    padding: 80px 20px;
+    text-align: center;
+    color: white;
+}
+
+.header h1 {
+    font-size: 38px;
+    margin-bottom: 10px;
+}
+
+/* ===== MENU ===== */
+.menu {
+    background: #222;
+}
+.menu ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+}
+.menu ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 15px 20px;
+    display: block;
+    font-weight: bold;
+}
+.menu ul li a:hover {
+    background: #0dcaf0;
+    color: black;
+}
+
+/* ===== BLOG ===== */
+.container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 40px 20px;
+}
+
+.blog-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+}
+
+/* ===== ARTICLE ===== */
+.post {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.12);
+    transition: 0.3s;
+}
+.post:hover {
+    transform: translateY(-6px);
+}
+
+/* ===== IMAGE RETOUCHÉE CSS ===== */
+.post img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    filter: brightness(1.05) contrast(1.15) saturate(1.2);
+}
+
+.post-content {
+    padding: 20px;
+}
+
+.post-content h3 {
+    margin-top: 0;
+    color: #0a58ca;
+}
+
+.post-content p {
+    font-size: 15px;
+    line-height: 1.6;
+    text-align: justify;
+}
+
+.tag {
+    display: inline-block;
+    background: #0dcaf0;
+    color: black;
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 12px;
+    margin-bottom: 10px;
+}
+
+/* ===== FOOTER ===== */
+.footer {
+    background: #222;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    margin-top: 40px;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+    .header h1 {
+        font-size: 28px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+    <a class="skip-link" href="#main">Passer au contenu</a>
+
+<header class="header" role="banner">
+    <h1><i class="fas fa-blog"></i> Blog du Club TIC</h1>
+    <p>Nos activités, formations et moments forts</p>
+</header>
+
+<nav class="menu" role="navigation" aria-label="Menu principal">
+<ul>
+<li><a href="index.html">Accueil</a></li>
+<li><a href="actualites.html">Actualités</a></li>
+<li><a href="blog.html">Blog</a></li>
+<li><a href="journal.html">Journal</a></li>
+<li><a href="contact.html"><i class="fas fa-envelope"></i> Contact</a></li>
+</ul>
+</nav>
+
+<main id="main">
+<div class="container">
+
+<div class="blog-grid">
+
+<!-- ARTICLE 1 -->
+<div class="post">
+<img src="activite/activite1.jpeg" alt="Activité du club">
+<div class="post-content">
+<span class="tag">Atelier</span>
+<h3>Travail de groupe du Club TIC</h3>
+<p>
+Les membres du Club TIC participent à des séances de travail collaboratif
+afin de renforcer l’esprit d’équipe et l’apprentissage pratique des outils numériques.
+</p>
+</div>
+</div>
+
+<!-- ARTICLE 2 -->
+<div class="post">
+<img src="activite/activite2.jpeg" alt="Formation TIC">
+<div class="post-content">
+<span class="tag">Formation</span>
+<h3>Formation en Technologies de l’Information</h3>
+<p>
+Des formations régulières sont organisées pour initier les élèves
+à l’informatique, à la communication numérique et aux nouvelles technologies.
+</p>
+</div>
+</div>
+
+<!-- ARTICLE 3 -->
+<div class="post">
+<img src="activite/activite3.jpeg" alt="Cours en classe">
+<div class="post-content">
+<span class="tag">Cours</span>
+<h3>Séance pratique en salle de classe</h3>
+<p>
+Les élèves mettent en pratique leurs connaissances à travers des cours interactifs,
+favorisant l’autonomie et la compréhension des concepts numériques.
+</p>
+</div>
+</div>
+
+<!-- ARTICLE 4 -->
+<div class="post">
+<img src="activite/activite4.jpeg" alt="Encadrement">
+<div class="post-content">
+<span class="tag">Encadrement</span>
+<h3>Encadrement et accompagnement</h3>
+<p>
+Le Club TIC bénéficie d’un encadrement pédagogique visant à guider les élèves
+dans leur apprentissage et leurs projets numériques.
+</p>
+</div>
+</div>
+
+            </div>
+        </div>
+
+    </main>
+
+    <footer class="footer" role="contentinfo">
+        © 2026 –  Mouhamed Toure- CLUB TIC | Tous droits réservés
+    </footer>
+
+</body>
+</html>

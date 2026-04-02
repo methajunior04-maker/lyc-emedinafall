@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Contact - CLUB TIC</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="siteweb.css">
+
+    <!-- Icônes -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+
+    <a class="skip-link" href="#main">Passer au contenu</a>
+
+    <header class="banner" role="banner">
+            <div class="banner-content">
+            <img src="images/logo.png" alt="Logo" class="logo">
+            <div class="banner-text">
+                <h1>Contact</h1>
+                <p>Renforcer les capacités des élèves en technologies de l'information et de la communication</p>
+            </div>
+        </div>
+    </header>
+
+    <nav class="menu" role="navigation" aria-label="Menu principal">
+        <ul>
+            <li><a href="index.html"><i class="fas fa-house"></i> Accueil</a></li>
+            <li><a href="actualites.html"><i class="fas fa-newspaper"></i> Actualités</a></li>
+            <li><a href="blog.html"><i class="fas fa-blog"></i> Blog</a></li>
+            <li><a href="journal.html"><i class="fas fa-book"></i> Journal</a></li>
+            <li><a href="contact.html" aria-current="page"><i class="fas fa-envelope"></i> Contact</a></li>
+        </ul>
+    </nav>
+
+    <main id="main">
+        <section class="section">
+            <h2>Nous contacter</h2>
+            <p class="muted">Pour toute question, contactez-nous via WhatsApp ou email. Nous répondons rapidement.</p>
+
+            <div class="cards">
+                <div class="card">
+                    <i class="fas fa-phone fa-2x"></i>
+                    <h3>WhatsApp</h3>
+                    <p><a href="https://wa.me/221777319348">+221 77 731 93 48</a></p>
+                    <p><a href="https://wa.me/221762505457">+221 76 250 54 57</a></p>
+                    <p><a href="https://wa.me/221704768481">+221 70 476 84 81</a></p>
+                </div>
+
+                <div class="card">
+                    <i class="fas fa-envelope fa-2x"></i>
+                    <h3>Email</h3>
+                    <p><a href="mailto:fallmodoufatsylla221@gmail.com">fallmodoufatsylla221@gmail.com</a></p>
+                </div>
+
+                <div class="card">
+                    <i class="fas fa-comment-dots fa-2x"></i>
+                    <h3>Formulaire</h3>
+                    <p>Envoyez-nous un message via ce formulaire :</p>
+                    <p><a href="#contact-form" class="btn btn-outline">Ouvrir le formulaire</a></p>
+                </div>
+
+                <div class="card">
+                    <i class="fas fa-map-marker-alt fa-2x"></i>
+                    <h3>Localisation</h3>
+                    <div style="width:100%;overflow:hidden;border-radius:8px;margin-bottom:8px;">
+                        <a href="https://maps.app.goo.gl/UseBaSccj2zbgbTh9" target="_blank" rel="noopener">
+                            <img src="images/maps.jpeg" alt="École YCEE de Na Fall - Localisation" style="width:100%;height:auto;display:block;cursor:pointer;">
+                        </a>
+                    </div>
+                    <p><a href="https://maps.app.goo.gl/3vsML5SgiU7ptsgbA?g_st=awb" target="_blank" rel="noopener">Ouvrir dans Google Maps</a></p>
+                </div>
+            </div>
+
+            <section id="contact-form" style="margin-top:18px;">
+                <form id="contactForm" action="https://formspree.io/f/yourFormID" method="POST" aria-label="Formulaire de contact">
+                    <div style="max-width:600px;margin:auto;">
+                        <label for="name">Nom</label>
+                        <input id="name" name="name" type="text" required style="width:100%;padding:10px;margin:6px 0;border-radius:6px;border:1px solid #ddd">
+
+                        <label for="email">Email</label>
+                        <input id="email" name="email" type="email" required style="width:100%;padding:10px;margin:6px 0;border-radius:6px;border:1px solid #ddd">
+
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="6" required style="width:100%;padding:10px;margin:6px 0;border-radius:6px;border:1px solid #ddd"></textarea>
+
+                        <button type="submit" class="btn" style="margin-top:8px;">Envoyer</button>
+                        <div id="form-status" role="status" aria-live="polite" style="margin-top:12px;color:var(--muted)"></div>
+                    </div>
+                </form>
+            </section>
+
+        </section>
+    </main>
+
+    <footer class="footer" role="contentinfo">
+        <p>© 2026 - CLUB TIC</p>
+    </footer>
+
+    <script>
+    (function(){
+        const form = document.getElementById('contactForm');
+        const status = document.getElementById('form-status');
+        const submitBtn = form && form.querySelector('button[type="submit"]');
+        if(!form) return;
+
+        function showStatus(message, color){
+            status.style.color = color || 'black';
+            status.textContent = message;
+        }
+
+        form.addEventListener('submit', async function(e){
+            e.preventDefault();
+
+            if(!form.checkValidity()){
+                showStatus('Veuillez remplir tous les champs correctement.', 'crimson');
+                const firstInvalid = form.querySelector(':invalid');
+                if(firstInvalid) firstInvalid.focus();
+                return;
+            }
+
+            const url = form.action; // configurez cette URL avec votre endpoint Formspree
+            const data = new FormData(form);
+
+            if(submitBtn) submitBtn.disabled = true;
+            showStatus('Envoi en cours...', 'black');
+
+            try{
+                const res = await fetch(url, {
+                    method: 'POST',
+                    body: data,
+                    headers: { 'Accept': 'application/json' }
+                });
+
+                if(res.ok){
+                    showStatus('Message envoyé — merci !', 'green');
+                    form.reset();
+                } else {
+                    let errText = 'Erreur lors de l\'envoi.';
+                    try{ const json = await res.json(); if(json && json.error) errText = json.error; }catch(e){}
+                    showStatus(errText + ' Vérifiez l\'URL Formspree et réessayez.', 'crimson');
+                }
+            }catch(err){
+                showStatus('Erreur réseau. Vérifiez votre connexion et réessayez.', 'crimson');
+            } finally {
+                if(submitBtn) submitBtn.disabled = false;
+            }
+        });
+    })();
+    </script>
+
+</body>
+</html>

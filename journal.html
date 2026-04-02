@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Journal du Club TIC</title>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <!-- Site CSS -->
+    <link rel="stylesheet" href="siteweb.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+<style>
+
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: #f4f6f9;
+}
+
+/* ===== HEADER JOURNAL ===== */
+.topbar {
+    background: #0a58ca;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.header {
+    background: white;
+    padding: 20px;
+    text-align: center;
+    border-bottom: 3px solid #0dcaf0;
+}
+
+.header h1 {
+    margin: 0;
+    font-size: 32px;
+}
+
+.menu {
+    background: #222;
+}
+
+.menu ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.menu ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 15px 20px;
+    display: block;
+    font-weight: bold;
+}
+
+.menu ul li a:hover {
+    background: #0dcaf0;
+    color: black;
+}
+
+/* ===== LAYOUT JOURNAL ===== */
+.container {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 25px;
+    padding: 30px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.article-principal {
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.article-principal h2 {
+    color: #0a58ca;
+}
+
+.article-principal p {
+    line-height: 1.6;
+    text-align: justify;
+}
+
+/* ===== SIDEBAR ===== */
+.sidebar {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.sidebar h3 {
+    border-bottom: 2px solid #0dcaf0;
+    padding-bottom: 5px;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    padding: 8px 0;
+}
+
+/* ===== FOOTER ===== */
+.footer {
+    text-align: center;
+    background: #222;
+    color: white;
+    padding: 15px;
+    margin-top: 40px;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 900px) {
+    .container {
+        grid-template-columns: 1fr;
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+    <a class="skip-link" href="#main">Passer au contenu</a>
+
+    <div class="topbar" role="banner">
+        REPUBLIQUE DU SENEGAL – UN PEUPLE • UN BUT • UNE FOI
+    </div>
+
+    <header class="header" role="banner">
+        <h1><i class="fas fa-newspaper"></i> Journal du Club T.I.C</h1>
+        <p>Lycée de Médina Fall</p>
+    </header>
+
+    <nav class="menu" role="navigation" aria-label="Menu principal">
+        <ul>
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="actualites.html">Actualités</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="journal.html">Journal</a></li>
+               <li><a href="contact.html"><i class="fas fa-envelope"></i> Contact</a></li>
+        </ul>
+    </nav>
+
+    <main id="main">
+
+        <div class="container">
+
+            <div class="article-principal">
+<h2>Présentation du Club T.I.C</h2>
+
+<p>
+Le Club T.I.C (Technologie, Informatique et Communication) est né suite à l’évolution rapide des technologies de l’information et de la communication, notamment avec l’avènement de l’Intelligence Artificielle.  
+Dans le milieu scolaire, ces technologies facilitent la communication, l’échange et la diffusion du savoir.
+</p>
+
+<p>
+Le Club a été installé au sein du Lycée de Médina Fall afin de permettre aux élèves d’utiliser efficacement ces outils numériques et d’éviter les dérives liées à leur mauvaise utilisation.
+</p>
+
+<h2>Objectif Général</h2>
+
+<p>
+Renforcer la capacité des élèves en Technologie de l’Informatique et de la Communication afin qu’ils disposent des connaissances nécessaires pour former d’autres élèves au sein du lycée et du quartier.
+</p>
+
+</div>
+
+<div class="sidebar">
+
+<h3><i class="fas fa-bullseye"></i> Objectifs Spécifiques</h3>
+<ul>
+<li>✔ Initier aux outils informatiques</li>
+<li>✔ Initier à la maintenance</li>
+<li>✔ Initier aux outils audiovisuels</li>
+<li>✔ Initier à la communication</li>
+</ul>
+
+<h3><i class="fas fa-chart-line"></i> Résultats Attendus</h3>
+<ul>
+<li>✔ Capacité à former d'autres élèves</li>
+<li>✔ Maîtrise des méthodes pédagogiques</li>
+<li>✔ Disponibilité d’outils pédagogiques</li>
+</ul>
+
+<h3><i class="fas fa-calendar"></i> Organisation</h3>
+<p>Formation 3 jours par semaine durant l’année scolaire.</p>
+
+</div>
+
+</div>
+
+<footer class="footer">
+© 2026  Mouhamed Toure- CLUB TIC | Tous droits réservés
+</footer>
+
+</body>
+</html>
