@@ -7,19 +7,17 @@
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
-    <!-- CSS principal -->
+    <!-- CSS -->
     <link rel="stylesheet" href="siteweb.css">
 
-    <!-- Icônes Font Awesome -->
+    <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
 
-    <a class="skip-link" href="#main">Passer au contenu</a>
+<a class="skip-link" href="#main">Passer au contenu</a>
 
-<!-- ======================
-     BANNIÈRE
-====================== -->
+<!-- BANNIÈRE -->
 <header class="banner">
     <div class="banner-content">
         <img src="images/logo.png" alt="Logo CLUB TIC" class="logo">
@@ -31,118 +29,107 @@
     </div>
 </header>
 
-<!-- ======================
-     MENU
-====================== -->
+<!-- MENU -->
 <nav class="menu">
     <ul>
-        <li><a href="index.html"><i class="fa-solid fa-house"></i> Accueil</a></li>
+        <li><a href="index.html" class="active"><i class="fa-solid fa-house"></i> Accueil</a></li>
         <li><a href="actualites.html"><i class="fa-solid fa-newspaper"></i> Actualités</a></li>
         <li><a href="blog.html"><i class="fa-solid fa-pen-nib"></i> Blog</a></li>
-        <li><a href="journal.html"><i class="fa-solid fa-book"></i> Journal de l'école</a></li>
+        <li><a href="journal.html"><i class="fa-solid fa-book"></i> Journal</a></li>
         <li><a href="contact.html"><i class="fa-solid fa-envelope"></i> Contact</a></li>
     </ul>
 </nav>
 
-<!-- ======================
-     CONTENU
-====================== -->
+<!-- CONTENU -->
 <main id="main">
 
-    <!-- HERO -->
-    <section class="hero">
-        <h2>Bienvenue au CLUB TIC</h2>
-        <p>
-            Le CLUB TIC est un espace d’apprentissage, d’innovation et de partage
-            dédié au renforcement des capacités des élèves en informatique
-            et communication numérique.
-        </p>
-        <a href="#" class="btn">Rejoindre le club</a>
-    </section>
+<!-- HERO -->
+<section class="hero">
+    <h2>Bienvenue au CLUB TIC</h2>
+    <p>
+        Le CLUB TIC est un espace d’apprentissage, d’innovation et de partage
+        dédié au renforcement des capacités des élèves en informatique
+        et communication numérique.
+    </p>
+    <a href="contact.html" class="btn">Rejoindre le club</a>
+</section>
 
-    <!-- PRÉSENTATION -->
-    <section class="section">
-        <h2><i class="fa-solid fa-users"></i> Qui sommes-nous ?</h2>
-        <p>
-            Le CLUB TIC est une initiative éducative visant à accompagner les élèves
-            dans la découverte et la maîtrise des outils numériques.
-            Il favorise la créativité, l’innovation et l’apprentissage des technologies modernes.
-        </p>
-    </section>
+<!-- PRÉSENTATION -->
+<section class="section">
+    <h2><i class="fa-solid fa-users"></i> Qui sommes-nous ?</h2>
+    <p>
+        Le CLUB TIC accompagne les élèves dans la maîtrise des outils numériques
+        et développe leur créativité.
+    </p>
+</section>
 
-    <!-- OBJECTIFS -->
-    <section class="section bg-light">
-        <h2><i class="fa-solid fa-bullseye"></i> Nos objectifs</h2>
+<!-- OBJECTIFS -->
+<section class="section bg-light">
+    <h2><i class="fa-solid fa-bullseye"></i> Nos objectifs</h2>
 
-        <div class="cards">
-            <div class="card">
-                <i class="fa-solid fa-laptop-code icon"></i>
-                <p>Initier les élèves à l’informatique</p>
-            </div>
-
-            <div class="card">
-                <i class="fa-solid fa-code icon"></i>
-                <p>Former aux bases du HTML et du CSS</p>
-            </div>
-
-            <div class="card">
-                <i class="fa-solid fa-palette icon"></i>
-                <p>Développer la créativité numérique</p>
-            </div>
-
-            <div class="card">
-                <i class="fa-solid fa-rocket icon"></i>
-                <p>Encourager l’innovation technologique</p>
-            </div>
+    <div class="cards">
+        <div class="card">
+            <i class="fa-solid fa-laptop-code icon"></i>
+            <p>Initiation à l’informatique</p>
         </div>
-    </section>
 
-    <!-- ACTIVITÉS -->
-    <section class="section">
-        <h2><i class="fa-solid fa-lightbulb"></i> Nos activités</h2>
-
-        <ul class="list">
-            <li>Ateliers de programmation</li>
-            <li>Initiation à la bureautique</li>
-            <li>Création de sites web</li>
-            <li>Formations TIC</li>
-            <li>Journal numérique de l’école</li>
-        </ul>
-    </section>
-
-    <!-- POURQUOI -->
-    <section class="section bg-light">
-        <h2><i class="fa-solid fa-graduation-cap"></i> Pourquoi rejoindre le CLUB TIC ?</h2>
-        <p>
-            Rejoindre le CLUB TIC, c’est se préparer aux métiers du numérique,
-            acquérir des compétences utiles et participer à des projets concrets
-            pour l’avenir.
-        </p>
-    </section>
-
-    <!-- ACTUALITÉS -->
-    <section class="section">
-        <h2><i class="fa-solid fa-newspaper"></i> Actualités récentes</h2>
-
-        <div class="cards">
-            <div class="card">📢 Lancement officiel du CLUB TIC</div>
-            <div class="card">🧑‍💻 Formation HTML & CSS</div>
-            <div class="card">🗞️ Publication du journal de l’école</div>
+        <div class="card">
+            <i class="fa-solid fa-code icon"></i>
+            <p>HTML & CSS</p>
         </div>
-    </section>
 
-    <!-- CITATION -->
-    <section class="quote">
-        <p>“Le numérique est la clé de l’avenir.”</p>
-    </section>
+        <div class="card">
+            <i class="fa-solid fa-palette icon"></i>
+            <p>Créativité numérique</p>
+        </div>
+
+        <div class="card">
+            <i class="fa-solid fa-rocket icon"></i>
+            <p>Innovation</p>
+        </div>
+    </div>
+</section>
+
+<!-- ACTIVITÉS -->
+<section class="section">
+    <h2><i class="fa-solid fa-lightbulb"></i> Nos activités</h2>
+
+    <ul class="list">
+        <li>Ateliers de programmation</li>
+        <li>Bureautique</li>
+        <li>Création de sites web</li>
+        <li>Formations TIC</li>
+        <li>Journal numérique</li>
+    </ul>
+</section>
+
+<!-- ACTUALITÉS -->
+<section class="section">
+    <h2><i class="fa-solid fa-newspaper"></i> Actualités</h2>
+
+    <div class="cards">
+        <div class="card">📢 Lancement du CLUB TIC</div>
+        <div class="card">💻 Formation HTML & CSS</div>
+        <div class="card">🗞️ Journal de l’école</div>
+    </div>
+</section>
+
+<!-- CITATION -->
+<section class="quote">
+    <p>“Le numérique est la clé de l’avenir.”</p>
+</section>
+
+<!-- NAVIGATION -->
+<div class="navigation-rapide">
+    <a href="blog.html" class="btn-nav">← Blog</a>
+    <a href="contact.html" class="btn-nav">Contact →</a>
+</div>
 
 </main>
 
-<!-- ======================
-     PIED DE PAGE
-====================== -->
+<!-- FOOTER -->
 <footer class="footer">
-    <p>© 2026  Mouhamed Toure- CLUB TIC | Tous droits réservés</p>
+    <p>© 2026 Mouhamed Touré - CLUB TIC</p>
 </footer>
 
 </body>
